@@ -9,15 +9,15 @@ function AboutCard() {
         <blockquote className="blockquote mb-0">
           <div style={{ textAlign: "left", lineHeight: "1.8" }}>
             <p style={{ marginBottom: "1.2rem" }}>
-              I am <span className="purple">Nguyễn Hồng Thắm</span>, a senior <span className="purple">Information Technology</span> student at <span className="purple">Saigon University</span> in Ho Chi Minh City, Vietnam.
+              I am <span className="highlight-primary">Nguyễn Hồng Thắm</span>, a senior <span className="highlight-primary">Information Technology</span> student at <span className="highlight-primary">Saigon University</span> in Ho Chi Minh City, Vietnam.
             </p>
             
             <p style={{ marginBottom: "1.2rem" }}>
-              My technical focus is on <span className="purple">Fullstack Web Development</span>. I specialize in building complete, high-performance web systems using <span className="purple">React, Next.js, TypeScript, NestJS</span>, and <span className="purple">PostgreSQL</span>.
+              My technical focus is on <span className="highlight-primary">Fullstack Web Development</span>. I specialize in building complete, high-performance web systems using <span className="highlight-primary">React, Next.js, TypeScript, NestJS</span>, and <span className="highlight-primary">PostgreSQL</span>.
             </p>
             
             <p style={{ marginBottom: "1.5rem" }}>
-              I have practical experience designing database schemas, integrating third-party APIs (like payment gateways and real-time Socket.io), and developing multi-role platforms through projects such as <span className="purple">MAY Coffee, FoodFast</span>, and <span className="purple">Vinabook</span>.
+              I have practical experience designing database schemas, integrating third-party APIs (like payment gateways and real-time Socket.io), and developing multi-role platforms through projects such as <span className="highlight-primary">MAY Coffee, FoodFast</span>, and <span className="highlight-primary">Vinabook</span>.
             </p>
             
             <p style={{ marginBottom: "1rem" }}>

@@ -46,7 +46,7 @@ describe('ProjectDetail Component - Back Button Test', () => {
     console.log('✅ Nút "Back to Projects" hiển thị OK');
   });
 
-  test('Bấm nút "Back to Projects" phải gọi navigate("/project")', async () => {
+  test('Bấm nút "Back to Projects" phải gọi navigate("/projects")', async () => {
     render(
       <BrowserRouter>
         <ProjectDetail />
@@ -62,8 +62,8 @@ describe('ProjectDetail Component - Back Button Test', () => {
 
     // Chờ xem navigate có được gọi không
     await waitFor(() => {
-      expect(mockNavigate).toHaveBeenCalledWith('/project');
-      console.log('✅ navigate("/project") được gọi OK');
+      expect(mockNavigate).toHaveBeenCalledWith('/projects');
+      console.log('✅ navigate("/projects") được gọi OK');
     });
   });
 

@@ -18,6 +18,19 @@ import Postman_Icon from "../../Assets/TechIcons/Postman.svg";
 import SQL_Icon from "../../Assets/TechIcons/SQL.svg";
 import Firebase_Icon from "../../Assets/TechIcons/Firebase.svg";
 import MUI_Icon from "../../Assets/TechIcons/MUI.svg";
+import ReactQuery_Icon from "../../Assets/TechIcons/reactquery.svg";
+import ReactRouter_Icon from "../../Assets/TechIcons/reactrouter.svg";
+import HTML5_Icon from "../../Assets/TechIcons/html5.svg";
+import CSS3_Icon from "../../Assets/TechIcons/css3-02-svgrepo-com.svg";
+import Auth_Icon from "../../Assets/TechIcons/auth.svg";
+import DotNet_Icon from "../../Assets/TechIcons/dotnet.svg";
+import PHP_Icon from "../../Assets/TechIcons/php-svgrepo-com.svg";
+import NestJS_Icon from "../../Assets/TechIcons/nestjs.svg";
+import MySQL_Icon from "../../Assets/TechIcons/mysql.svg";
+import Prisma_Icon from "../../Assets/TechIcons/prisma.svg";
+import Supabase_Icon from "../../Assets/TechIcons/supabase.svg";
+import Swagger_Icon from "../../Assets/TechIcons/swagger.svg";
+import GitHubActions_Icon from "../../Assets/TechIcons/githubactions.svg";
 
 function Techstack() {
   const skills = {
@@ -28,18 +41,18 @@ function Techstack() {
       { name: "JavaScript (ES6+)", icon: Javascript_Icon },
       { name: "Tailwind CSS", icon: Tailwind_Icon },
       { name: "Redux Toolkit", icon: Redux_Icon },
-      { name: "React Query", icon: React_Icon },
-      { name: "React Router", icon: React_Icon },
-      { name: "HTML5 / CSS3", icon: MUI_Icon }
+      { name: "React Query", icon: ReactQuery_Icon },
+      { name: "React Router", icon: ReactRouter_Icon },
+      { name: "HTML5 / CSS3", icon: HTML5_Icon }
     ],
     "Backend Development": [
       { name: "Node.js", icon: Node_Icon },
-      { name: "NestJS", icon: Node_Icon },
+      { name: "NestJS", icon: NestJS_Icon },
       { name: "RESTful APIs", icon: Postman_Icon },
-      { name: "Authentication & Authorization", icon: SQL_Icon },
+      { name: "Authentication & Authorization", icon: Auth_Icon },
       { name: "Appwrite", icon: Firebase_Icon },
-      { name: ".NET Core (Basic)", icon: SQL_Icon },
-      { name: "PHP (Basic)", icon: SQL_Icon }
+      { name: ".NET Core (Basic)", icon: DotNet_Icon },
+      { name: "PHP (Basic)", icon: PHP_Icon }
     ],
     "Programming Languages": [
       { name: "C++", icon: CPlusPlus_Icon },
@@ -49,18 +62,18 @@ function Techstack() {
     ],
     "Database & Data Management": [
       { name: "PostgreSQL", icon: SQL_Icon },
-      { name: "MySQL", icon: SQL_Icon },
+      { name: "MySQL", icon: MySQL_Icon },
       { name: "SQL Server", icon: SQL_Icon },
-      { name: "Prisma ORM", icon: SQL_Icon },
-      { name: "Supabase", icon: Firebase_Icon },
+      { name: "Prisma ORM", icon: Prisma_Icon },
+      { name: "Supabase", icon: Supabase_Icon },
       { name: "LocalStorage API", icon: Javascript_Icon }
     ],
     "Tools & Workflow": [
       { name: "Git / GitHub", icon: Git_Icon },
       { name: "Docker", icon: Docker_Icon },
       { name: "Jest", icon: Node_Icon },
-      { name: "GitHub Actions", icon: Git_Icon },
-      { name: "Swagger", icon: Postman_Icon },
+      { name: "GitHub Actions", icon: GitHubActions_Icon },
+      { name: "Swagger", icon: Swagger_Icon },
       { name: "Postman", icon: Postman_Icon }
     ],
     "Core Concepts": [
@@ -83,11 +96,11 @@ const skillBoxStyle = {
 
   padding: "12px 18px",
 
-  background: "rgba(18,10,35,0.92)",
-  border: "2px solid rgba(192,132,245,0.45)",
+  background: "rgba(248, 248, 245, 0.9)",
+  border: "2px solid #5F7D66",
   borderRadius: "999px",
 
-  color: "#e8e8e8",
+  color: "#1F2722",
   fontSize: "15px",
   fontWeight: "500",
 
@@ -96,13 +109,13 @@ const skillBoxStyle = {
 
   minHeight: "62px",
 
-  boxShadow: "0 0 12px rgba(192,132,245,.12)"
+  boxShadow: "0 0 12px rgba(95, 125, 102, 0.12)"
 };
 
 const getSkillBoxHoverStyle = () => ({
   transform: "translateY(-4px)",
-  border: "2px solid #c084f5",
-  boxShadow: "0 0 22px rgba(192,132,245,.35)"
+  border: "2px solid #5F7D66",
+  boxShadow: "0 0 22px rgba(95, 125, 102, 0.35)"
 });
 
 return (
@@ -122,7 +135,7 @@ return (
       >
         <h4
           style={{
-            color: "#c084f5",
+            color: "#5F7D66",
             marginBottom: "26px",
             textAlign: "center",
             fontSize: "24px",

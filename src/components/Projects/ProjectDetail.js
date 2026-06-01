@@ -272,7 +272,7 @@ function ProjectDetail() {
 
   const handleBackClick = () => {
     try {
-      navigate("/project");
+      navigate("/projects");
     } catch (error) {
       console.error("Error during navigation:", error);
     }

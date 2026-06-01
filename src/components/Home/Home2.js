@@ -10,20 +10,20 @@ function Home2() {
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+              LET ME <span className="highlight-primary"> INTRODUCE </span> MYSELF
             </h1>
             <div className="home-about-body" style={{ lineHeight: "1.8" }}>
               <p style={{ marginBottom: "1.2rem" }}>
-                I am a Software Engineer specializing in <span className="purple">Fullstack Web Development</span>, focused on building clean, robust, and scalable applications.
+                I am a Software Engineer specializing in <span className="highlight-primary">Fullstack Web Development</span>, focused on building clean, robust, and scalable applications.
               </p>
               
               <p style={{ marginBottom: "1.2rem" }}>
                 My core expertise spans modern frameworks and database systems:
-                {" "}<span className="purple">React, Next.js, TypeScript, NestJS, Node.js</span>, and <span className="purple">PostgreSQL</span>.
+                {" "}<span className="highlight-primary">React, Next.js, TypeScript, NestJS, Node.js</span>, and <span className="highlight-primary">PostgreSQL</span>.
               </p>
               
               <p style={{ marginBottom: "1.2rem" }}>
-                I have hands-on experience designing complete multi-role software platforms, integrating payment systems, and implementing real-time functionality through projects like <span className="purple">MAY Coffee, FoodFast</span>, and <span className="purple">Vinabook</span>.
+                I have hands-on experience designing complete multi-role software platforms, integrating payment systems, and implementing real-time functionality through projects like <span className="highlight-primary">MAY Coffee, FoodFast</span>, and <span className="highlight-primary">Vinabook</span>.
               </p>
               
               <p style={{ marginBottom: "1.2rem" }}>
