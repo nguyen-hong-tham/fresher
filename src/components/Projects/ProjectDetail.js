@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button, Badge } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { useParams, useNavigate } from "react-router-dom";
 import Particle from "../Particle";
 import { AiOutlineArrowLeft } from "react-icons/ai";
