@@ -1598,3 +1598,182 @@ button:focus {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
 }
 
+/* --------------------------------- */
+/* Experience Section & Timeline Style */
+/* --------------------------------- */
+
+.experience-section {
+  position: relative !important;
+  padding-top: 150px !important;
+  padding-bottom: 80px !important;
+  background-image: var(--section-background-color) !important;
+  color: var(--text-primary) !important;
+}
+
+.timeline-container {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline-container::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: var(--border);
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  margin-left: -1px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.timeline-badge {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  margin-left: -20px;
+  background-color: var(--surface);
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  text-align: center;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-card {
+  margin-left: 60px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease-in-out;
+}
+
+.timeline-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(95, 125, 102, 0.08);
+  transform: translateY(-2px);
+}
+
+.timeline-card-header {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.role-title {
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-accent {
+  color: var(--accent);
+  font-size: 1.3rem;
+}
+
+.company-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.company-name, .duration {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.exp-description {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  margin-bottom: 25px;
+}
+
+.section-subtitle {
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+}
+
+.highlights-list {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.highlights-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  text-align: left;
+}
+
+.highlights-list li::before {
+  content: "•";
+  color: var(--accent);
+  font-weight: bold;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+}
+
+.tech-tag-pill {
+  background: rgba(95, 125, 102, 0.06) !important;
+  border: 1px solid rgba(95, 125, 102, 0.15) !important;
+  color: var(--accent) !important;
+  padding: 5px 14px !important;
+  border-radius: 6px !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+}
+
+@media (max-width: 767px) {
+  .timeline-card {
+    padding: 20px;
+  }
+  .role-title {
+    font-size: 1.3rem;
+  }
+  .company-info {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+

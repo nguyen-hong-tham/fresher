@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { useNavigate, Link } from "react-router-dom";
 import Particle from "../Particle";
+import Type from "./Type";
 import {
   AiFillGithub,
   AiOutlineFacebook,
@@ -67,19 +68,21 @@ function Home() {
                 Hello, I'm <strong className="highlight-primary">Nguyễn Hồng Thắm</strong>
               </h1>
 
-              <h2 className="heading-sub" style={{ paddingLeft: 50, textAlign: "left", fontSize: "1.8rem", color: "var(--text-secondary)", fontWeight: "500" }}>
-                Final-Year IT Student
+              <div style={{ paddingLeft: 50, textAlign: "left", height: "55px", marginBottom: "15px" }}>
+                <Type />
+              </div>
+
+              <h2 className="heading-sub" style={{ paddingLeft: 50, textAlign: "left", fontSize: "1.25rem", color: "var(--text-secondary)", fontWeight: "500", lineHeight: "1.6", maxWidth: "650px", marginBottom: "15px" }}>
+                Final-year Information Technology student with hands-on experience building Full-stack applications and Backend systems through production-grade projects and a 3-month corporate internship.
               </h2>
-              <p style={{ paddingLeft: 50, textAlign: "left", fontSize: "1.2rem", color: "var(--text-primary)", fontWeight: "500", marginTop: "5px" }}>
-                focused on Fullstack Web Development.
-              </p>
-              <p style={{ paddingLeft: 50, textAlign: "left", fontSize: "1.1rem", color: "var(--text-secondary)", marginTop: "10px", marginBottom: "15px", lineHeight: "1.6" }}>
-                Currently building web applications with React, Next.js, NestJS, and PostgreSQL.
+              
+              <p style={{ paddingLeft: 50, textAlign: "left", fontSize: "1.05rem", color: "var(--text-primary)", marginTop: "5px", marginBottom: "20px", lineHeight: "1.6", maxWidth: "650px" }}>
+                Backend-focused developer experienced in building web applications with React, Next.js, NestJS, and PostgreSQL. Passionate about building scalable architectures, robust RESTful APIs, secure authentication flows, and database-driven systems.
               </p>
               
-              <div style={{ paddingLeft: 50, textAlign: "left", marginBottom: "20px" }}>
+              <div style={{ paddingLeft: 50, textAlign: "left", marginBottom: "25px" }}>
                 <span className="status-badge live" style={{ display: "inline-block", padding: "6px 12px", fontSize: "0.85rem" }}>
-                  Open to Web Development Internship opportunities.
+                  Ready for Fresher Backend / Full-stack Developer roles.
                 </span>
               </div>
 
@@ -126,15 +129,15 @@ function Home() {
           <div className="quick-stats-grid">
             <div className="stat-card-item">
               <div className="stat-number">3+</div>
-              <div className="stat-label">Production-Style Projects</div>
+              <div className="stat-label">Featured Projects</div>
             </div>
             <div className="stat-card-item">
-              <div className="stat-number">5+</div>
-              <div className="stat-label">Core Technologies</div>
+              <div className="stat-number">3 Months</div>
+              <div className="stat-label">Internship Experience</div>
             </div>
             <div className="stat-card-item">
-              <div className="stat-number">Seeking</div>
-              <div className="stat-label">Web Development Internship</div>
+              <div className="stat-number">Ready</div>
+              <div className="stat-label">Ready for Fresher Roles</div>
             </div>
           </div>
         </div>
@@ -181,12 +184,12 @@ function Home() {
         </div>
       </Container>
 
-      {/* Internship CTA Section */}
+      {/* Fresher Opportunity CTA Section */}
       <Container>
         <div className="internship-cta-section" style={{ paddingTop: "60px", paddingBottom: "80px", textAlign: "center", borderTop: "1px solid rgba(0,0,0,0.1)" }}>
-          <h2 style={{ fontSize: "2.2rem", marginBottom: "15px", fontWeight: "600" }}>Open to Web Development Internship Opportunities</h2>
-          <p style={{ fontSize: "1.1rem", color: "var(--text-secondary)", marginBottom: "35px", maxWidth: "600px", margin: "0 auto 35px" }}>
-            Let's build something together. I'm looking for opportunities to contribute to real-world projects and learn from experienced developers.
+          <h2 style={{ fontSize: "2.2rem", marginBottom: "15px", fontWeight: "600" }}>Open for Fresher Backend / Full-stack Developer Opportunities</h2>
+          <p style={{ fontSize: "1.1rem", color: "var(--text-secondary)", marginBottom: "35px", maxWidth: "650px", margin: "0 auto 35px", lineHeight: "1.6" }}>
+            Ready to contribute and optimize systems from day one. I am seeking full-time opportunities in enterprise environments with a career path in Backend or Full-stack development.
           </p>
           
           <div style={{ display: "flex", gap: "15px", justifyContent: "center", flexWrap: "wrap", flexDirection: "column", alignItems: "center" }}>
@@ -196,7 +199,7 @@ function Home() {
             >
               Download CV
             </Link>
-            <p style={{ fontSize: "1rem", color: "var(--text-secondary)", marginTop: "10px" }}>Connect via social links below or reach out directly.</p>
+            <p style={{ fontSize: "1rem", color: "var(--text-secondary)", marginTop: "10px" }}>Connect via the social links below or reach out directly.</p>
           </div>
         </div>
       </Container>

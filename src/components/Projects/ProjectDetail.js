@@ -5,7 +5,7 @@ import Particle from "../Particle";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { BsGithub } from "react-icons/bs";
 
-// Scale-ready Project roles database
+// Scale-ready Project database with detailed engineering insights
 const projectsData = [
   {
     slug: "may-coffee",
@@ -22,6 +22,10 @@ const projectsData = [
       "VNPay"
     ],
     ghLink: "https://github.com/nguyen-hong-tham/MAY",
+    overview: "MAY Coffee is a comprehensive milk tea e-commerce platform featuring an interactive web app for customers to browse, customize drinks (sizes, toppings), earn loyalty rewards, and pay securely via VNPay; a Staff Portal for real-time order tracking and queue management; and a centralized Admin Dashboard for managing catalogs, viewing business analytics, and exporting reports (Excel/PDF).",
+    roleResponsibilities: "Served as the primary Backend Developer. Designed the modular NestJS architecture, set up the PostgreSQL relational schema using Prisma ORM, integrated VNPay checkout and IPN callbacks, built real-time order synchronization with Socket.io, and implemented Firebase OTP authentication alongside Role-Based Access Control (RBAC).",
+    challenges: "Synchronizing live order statuses across three interfaces (Customer, Staff, Admin) without connections dropping. Managing asynchronous payment callbacks reliably to prevent inconsistent order states if users closed their browser before redirection.",
+    lessons: "Gained deep experience in NestJS modular architecture, query optimization in Prisma, secure API design with JWT guards, and implementing robust webhook handling for third-party integrations.",
     roles: [
       {
         name: "Customer Experience",
@@ -85,6 +89,10 @@ const projectsData = [
       "React Query"
     ],
     ghLink: "https://github.com/nguyen-hong-tham/vina_book",
+    overview: "Vinabook is a full-stack online bookstore featuring smart search, catalog filtering, shopping carts, checkout workflows, and an integrated AI chatbot to assist users with book recommendations. It includes an Admin Dashboard for managing inventory (CRUD on books and categories), user profiles, and tracking sales analytics.",
+    roleResponsibilities: "Full-stack Developer. Built responsive customer and admin interfaces with Next.js and TailwindCSS; implemented RESTful APIs using Node.js and Express; designed the PostgreSQL database schema; integrated the AI chatbot recommendations system; and managed client-side API state using React Query.",
+    challenges: "Optimizing multi-criteria search and filter queries on large catalogs while configuring Next.js Server-Side Rendering (SSR) to speed up initial load times and improve SEO for individual book pages.",
+    lessons: "Mastered hybrid rendering patterns (SSR & CSR) in Next.js, client-side API caching with React Query, and designing system prompts to align chatbot behavior with specific business logic.",
     roles: [
       {
         name: "Customer Experience",
@@ -131,6 +139,10 @@ const projectsData = [
       "Appwrite"
     ],
     ghLink: "https://github.com/nguyen-hong-tham/fast-food",
+    overview: "FoodFast is a modern multi-role food ordering and delivery ecosystem. It includes a cross-platform mobile app for customers to explore restaurants, order meals, pay, and track drone deliveries; a Web Portal for restaurants to manage catalogs and order statuses; and a central Admin Console for platform oversight.",
+    roleResponsibilities: "Full-stack Developer. Created the responsive customer mobile app with React Native and Expo; styled components using TailwindCSS; structured database collections, storage buckets, and user authentication on Appwrite Cloud; built the restaurant web portal using React + Vite; and managed global state using Zustand.",
+    challenges: "Maintaining UI consistency across iOS and Android platforms via Expo. Synchronizing complex state transitions of active orders between the customer's mobile app and the restaurant's web portal in real-time.",
+    lessons: "Acquired strong hands-on experience in cross-platform mobile development, lightweight global state management with Zustand, and integrating BaaS (Backend-as-a-Service) cloud architectures like Appwrite.",
     roles: [
       {
         name: "Customer Experience (Mobile App)",
@@ -189,6 +201,10 @@ const projectsData = [
       "LocalStorage API"
     ],
     ghLink: "https://github.com/nguyen-hong-tham/Bookstore-Website-",
+    overview: "GoodBookClub is a lightweight, responsive online bookstore designed to provide a fast and minimalist shopping experience, complete with an offline-capable admin dashboard for managing product inventory.",
+    roleResponsibilities: "Sole Frontend Developer. Crafted a highly responsive UI from scratch using HTML5 and Vanilla CSS; developed client-side search, filtering, cart workflows, and checkout pipelines using ES6+ JavaScript; used LocalStorage API to persist cart and order data without a database.",
+    challenges: "Implementing complex state synchronization for shopping cart items (adding, updating quantities, deleting) and persisting order data using LocalStorage while maintaining high browser performance.",
+    lessons: "Solidified core browser concepts including DOM manipulation, responsive layouts (CSS Flexbox/Grid), asynchronous JavaScript, and Client-Side Storage APIs.",
     roles: [
       {
         name: "Customer Experience",
@@ -230,6 +246,10 @@ const projectsData = [
       "MySQL"
     ],
     ghLink: "https://github.com/nguyen-hong-tham",
+    overview: "BOOKEPT is a classic e-commerce bookstore utilizing a traditional Client-Server architecture with PHP and MySQL, supporting book search, shopping carts, Cash-on-Delivery (COD) checkout pipelines, and a full catalog manager for administrators.",
+    roleResponsibilities: "Full-stack Developer. Designed and normalized the MySQL database schema, wrote optimized SQL query statements, developed server-side request routing and page generation using raw PHP, and created interactive client interfaces with JavaScript.",
+    challenges: "Hardening the raw PHP codebase against common vulnerabilities like SQL Injection using Prepared Statements, and XSS through thorough input validation and output escaping.",
+    lessons: "Learned the foundational HTTP request-response cycle, database normalization techniques, user authentication mechanics via Session/Cookie, and writing secure server-side logic from scratch.",
     roles: [
       {
         name: "Customer Experience",
@@ -341,8 +361,25 @@ function ProjectDetail() {
           </div>
         </div>
 
-        {/* Roles Showcase Grid */}
-        <Row className="justify-content-center" style={{ marginTop: "40px" }}>
+        {/* Project Overview Card */}
+        <Row style={{ marginBottom: "40px" }}>
+          <Col md={12}>
+            <div className="project-overview-card" style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: "12px", padding: "30px", textAlign: "left" }}>
+              <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: "700", marginBottom: "15px", color: "var(--text-primary)" }}>
+                Project Overview
+              </h3>
+              <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "1.05rem", lineHeight: "1.8", color: "var(--text-secondary)", marginBottom: 0 }}>
+                {project.overview}
+              </p>
+            </div>
+          </Col>
+        </Row>
+
+        {/* Roles Showcase Title & Grid */}
+        <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: "700", marginBottom: "25px", textAlign: "left", color: "var(--text-primary)" }}>
+          Key Features & Demos
+        </h3>
+        <Row className="justify-content-center">
           {project.roles.map((role, index) => {
             // Determine column widths based on number of roles for premium scaling
             let colVal = 12;
@@ -431,6 +468,47 @@ function ProjectDetail() {
             );
           })}
         </Row>
+
+        {/* Engineering Insights Section */}
+        <Row style={{ marginTop: "20px" }}>
+          <Col md={12} style={{ marginBottom: "40px" }}>
+            <div className="engineering-insights-card" style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: "12px", padding: "30px", textAlign: "left" }}>
+              <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: "700", marginBottom: "25px", color: "var(--text-primary)", borderBottom: "1px solid var(--border)", paddingBottom: "15px" }}>
+                Engineering Depth & Insights
+              </h3>
+              
+              <Row>
+                <Col md={4} style={{ marginBottom: "20px" }}>
+                  <h4 style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: "600", color: "var(--accent)", marginBottom: "12px" }}>
+                    Role & Responsibilities
+                  </h4>
+                  <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.95rem", lineHeight: "1.7", color: "var(--text-secondary)" }}>
+                    {project.roleResponsibilities}
+                  </p>
+                </Col>
+
+                <Col md={4} style={{ marginBottom: "20px" }}>
+                  <h4 style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: "600", color: "var(--accent)", marginBottom: "12px" }}>
+                    Challenges Faced
+                  </h4>
+                  <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.95rem", lineHeight: "1.7", color: "var(--text-secondary)" }}>
+                    {project.challenges}
+                  </p>
+                </Col>
+
+                <Col md={4} style={{ marginBottom: "20px" }}>
+                  <h4 style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: "600", color: "var(--accent)", marginBottom: "12px" }}>
+                    Lessons Learned
+                  </h4>
+                  <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.95rem", lineHeight: "1.7", color: "var(--text-secondary)" }}>
+                    {project.lessons}
+                  </p>
+                </Col>
+              </Row>
+            </div>
+          </Col>
+        </Row>
+
       </Container>
     </Container>
   );

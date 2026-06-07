@@ -7,6 +7,7 @@ import Projects from "./components/Projects/Projects";
 import ProjectDetail from "./components/Projects/ProjectDetail";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
+import Experience from "./components/Experience/Experience";
 import {
   HashRouter as Router,
   Route,
@@ -40,6 +41,7 @@ function App() {
           <Route path="/projects/:projectSlug" element={<ProjectDetail />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
+          <Route path="/experience" element={<Experience />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>

@@ -11,7 +11,7 @@ const DeveloperProfileCard = () => {
       <div className="profile-card-header">
         <img src={profileImage} alt="Profile" className="profile-avatar-image" style={{ width: "80px", height: "80px", borderRadius: "50%", objectFit: "cover" }} />
         <h3 className="profile-card-name">Nguyễn Hồng Thắm</h3>
-        <p className="profile-card-title">Fullstack Developer</p>
+        <p className="profile-card-title">Backend-Focused Full-stack Developer</p>
       </div>
       <div className="profile-info-list">
         <div className="profile-info-item">
@@ -19,20 +19,18 @@ const DeveloperProfileCard = () => {
           <span className="profile-info-value">Saigon University</span>
         </div>
         <div className="profile-info-item">
-          <span className="profile-info-label">Focus</span>
-          <span className="profile-info-value">Fullstack Web Development</span>
+          <span className="profile-info-label">Core Focus</span>
+          <span className="profile-info-value">
+            Backend Development / REST API Design / Database Design / Auth & Auth / Real-time Systems
+          </span>
         </div>
         <div className="profile-info-item">
           <span className="profile-info-label">Current Stack</span>
-          <span className="profile-info-value">React / Next.js / NestJS</span>
+          <span className="profile-info-value">React / Next.js / NestJS / PostgreSQL</span>
         </div>
         <div className="profile-info-item">
-          <span className="profile-info-label">Interested In</span>
-          <span className="profile-info-value">System Design / Clean Architecture</span>
-        </div>
-        <div className="profile-info-item">
-          <span className="profile-info-label">Seeking</span>
-          <span className="profile-info-value">Web Internship</span>
+          <span className="profile-info-label">Career Objective</span>
+          <span className="profile-info-value">Fresher Backend Developer / Fresher Full-stack Developer</span>
         </div>
       </div>
     </div>
@@ -61,19 +59,28 @@ function About() {
               
               <div style={{ lineHeight: "1.8", fontSize: "1.1rem", color: "var(--text-secondary)" }}>
                 <p style={{ marginBottom: "1.5rem" }}>
-                  I'm a final-year Information Technology student with a strong interest in Fullstack Development.
+                  I am a final-year Information Technology student at Saigon University. Driven by a deep passion for <strong>Software Engineering</strong> and <strong>Backend Development</strong>, I focus on building high-quality, scalable, and easily maintainable web applications.
                 </p>
                 
                 <p style={{ marginBottom: "1.5rem" }}>
-                  I enjoy building applications that combine frontend experiences, backend workflows, and practical problem solving.
+                  I have recently completed a 3-month internship at <strong>VNA Group</strong> as a <strong>Backend Developer Intern</strong>, where I collaborated on production software, worked with large-scale databases, and adhered to enterprise-level coding standards.
                 </p>
                 
                 <p style={{ marginBottom: "1.5rem" }}>
-                  Through projects such as <strong className="highlight-primary">MAY Coffee</strong>, <strong className="highlight-primary">FoodFast</strong>, and <strong className="highlight-primary">Vinabook</strong>, I've explored authentication systems, RESTful APIs, payment integration, real-time functionality, and multi-role application design.
+                  Throughout my academic and professional journey, I have built notable applications like <strong>MAY Coffee</strong>, <strong>VinaBook</strong>, and <strong>FoodFast</strong>, mastering critical technical concepts including:
                 </p>
-                
+
+                <ul style={{ paddingLeft: "20px", marginBottom: "1.5rem" }}>
+                  <li style={{ marginBottom: "0.5rem" }}>Designing and developing standardized, robust <strong>RESTful APIs</strong>.</li>
+                  <li style={{ marginBottom: "0.5rem" }}>Designing, building, and managing relational databases (PostgreSQL, MySQL, Prisma ORM).</li>
+                  <li style={{ marginBottom: "0.5rem" }}>Implementing secure authentication and authorization systems (JWT, Role-Based Access Control / <strong>RBAC</strong>).</li>
+                  <li style={{ marginBottom: "0.5rem" }}>Integrating online payment gateways (VNPay) and managing transaction lifecycles.</li>
+                  <li style={{ marginBottom: "0.5rem" }}>Building real-time data sync features using <strong>Socket.io</strong>.</li>
+                  <li style={{ marginBottom: "0.5rem" }}>Developing end-to-end <strong>Full-stack</strong> web applications connecting interactive frontend views with solid backend systems.</li>
+                </ul>
+
                 <p style={{ marginBottom: "1.5rem" }}>
-                  Outside of coding, I'm interested in UI inspiration, continuous learning, and building maintainable software systems.
+                  Armed with a solid foundation, analytical problem-solving skills, and real-world corporate internship experience, I am ready to join development teams and deliver immediate value as a <strong>Fresher Backend Developer</strong> or <strong>Fresher Full-stack Developer</strong>.
                 </p>
               </div>
             </Col>

@@ -17,8 +17,13 @@ function Projects() {
           My Recent <strong className="highlight-primary">Works </strong>
         </h1>
         <p style={{ color: "var(--text-secondary)" }}>
-          Here are a few projects I've worked on recently.
+          Here are the projects I have developed, showcasing full-stack capabilities, database design, and real-time workflows.
         </p>
+
+        {/* Featured Projects (Dự án nổi bật) */}
+        <h2 className="project-heading-sub" style={{ color: "var(--text-primary)", fontSize: "1.8em", marginTop: "40px", marginBottom: "20px", borderBottom: "1px solid var(--border)", paddingBottom: "10px", textAlign: "left" }}>
+          Featured <strong className="highlight-primary">Projects</strong>
+        </h2>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
@@ -52,7 +57,13 @@ function Projects() {
               slug="foodfast"
             />
           </Col>
+        </Row>
 
+        {/* Other Projects (Dự án khác) */}
+        <h2 className="project-heading-sub" style={{ color: "var(--text-primary)", fontSize: "1.8em", marginTop: "40px", marginBottom: "20px", borderBottom: "1px solid var(--border)", paddingBottom: "10px", textAlign: "left" }}>
+          Other <strong className="highlight-primary">Projects</strong>
+        </h2>
+        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={goodBookclub_users}
