@@ -136,14 +136,15 @@ const projectsData = [
         name: "Customer Experience (Mobile App)",
         status: "COMING SOON",
         imgPath: require("../../Assets/Projects/fast_food_mobile.png"),
+        imageFit: "contain",
         summary: [
           "Customers can browse restaurants, explore menus, and manage carts",
           "Complete payments and track orders in real time",
           "Monitor drone delivery routes and manage profiles",
           "Cross-platform responsive mobile application workflows"
         ],
-        demoLink: "https://github.com/nguyen-hong-tham/fast-food",
-        credentials: null
+        // demoLink: "https://github.com/nguyen-hong-tham/fast-food",
+        // credentials: null
       },
       {
         name: "Restaurant Portal",
@@ -286,8 +287,8 @@ function ProjectDetail() {
           <h1 style={{ color: "white", marginTop: "50px" }}>
             Project not found
           </h1>
-          <Button 
-            variant="primary" 
+          <Button
+            variant="primary"
             onClick={handleBackClick}
             style={{ marginTop: "20px" }}
           >
@@ -305,7 +306,7 @@ function ProjectDetail() {
         {/* Premium Header Section */}
         <div className="project-detail-header">
           <div className="header-nav-wrapper">
-            <Button 
+            <Button
               variant="primary"
               onClick={handleBackClick}
               className="project-back-btn"
@@ -353,11 +354,11 @@ function ProjectDetail() {
             }
 
             return (
-              <Col 
-                key={index} 
-                xs={12} 
-                md={colVal} 
-                className="project-role-col" 
+              <Col
+                key={index}
+                xs={12}
+                md={colVal}
+                className="project-role-col"
                 style={{ marginBottom: "40px" }}
               >
                 <div className="project-role-card">
@@ -370,10 +371,10 @@ function ProjectDetail() {
                   </div>
 
                   {/* Screenshot Preview */}
-                  <div className="project-role-image-container">
-                    <img 
-                      src={role.imgPath} 
-                      alt={role.name} 
+                  <div className={`project-role-image-container ${role.imageFit === "contain" ? "contain-fit" : ""}`}>
+                    <img
+                      src={role.imgPath}
+                      alt={role.name}
                       className="project-role-image"
                     />
                   </div>
