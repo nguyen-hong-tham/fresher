@@ -134,17 +134,18 @@ const projectsData = [
     roles: [
       {
         name: "Customer Experience (Mobile App)",
-        status: "COMING SOON",
+        status: "LIVE",
         imgPath: require("../../Assets/Projects/fast_food_mobile.png"),
         imageFit: "contain",
+        isScan: true,
         summary: [
           "Customers can browse restaurants, explore menus, and manage carts",
           "Complete payments and track orders in real time",
           "Monitor drone delivery routes and manage profiles",
           "Cross-platform responsive mobile application workflows"
         ],
-        // demoLink: "https://github.com/nguyen-hong-tham/fast-food",
-        // credentials: null
+        demoLink: "https://github.com/nguyen-hong-tham/fast-food",
+        credentials: null
       },
       {
         name: "Restaurant Portal",
@@ -399,6 +400,11 @@ function ProjectDetail() {
                           </div>
                         ))}
                       </div>
+                    ) : role.isScan ? (
+                      <div className="project-credentials-box public-demo scan-instruction" style={{ textAlign: "center" }}>
+                        <div style={{ fontWeight: "600", marginBottom: "4px" }}>Scan QR code with Expo Go to run the app</div>
+                        <div style={{ fontSize: "0.85rem", opacity: 0.8 }}>Note: Download Expo Go first.</div>
+                      </div>
                     ) : (
                       <div className="project-credentials-box public-demo">
                         Public Demo Available
@@ -407,17 +413,19 @@ function ProjectDetail() {
                   </div>
 
                   {/* Deploy Button */}
-                  <div className="project-action-container">
-                    <Button
-                      className="project-go-btn"
-                      href={role.demoLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      disabled={role.status === "COMING SOON" || role.status === "PRIVATE"}
-                    >
-                      {role.status === "COMING SOON" ? "COMING SOON" : (role.status === "PRIVATE" ? "PRIVATE" : "GO →")}
-                    </Button>
-                  </div>
+                  {!role.isScan && (
+                    <div className="project-action-container">
+                      <Button
+                        className="project-go-btn"
+                        href={role.demoLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        disabled={role.status === "COMING SOON" || role.status === "PRIVATE"}
+                      >
+                        {role.status === "COMING SOON" ? "COMING SOON" : (role.status === "PRIVATE" ? "PRIVATE" : "GO →")}
+                      </Button>
+                    </div>
+                  )}
                 </div>
               </Col>
             );
