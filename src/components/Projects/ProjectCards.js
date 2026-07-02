@@ -5,6 +5,17 @@ import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 
+const renderFormattedText = (text) => {
+  if (!text) return "";
+  const parts = text.split(/(\*\*.*?\*\*)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return <strong key={i} style={{ fontWeight: "700" }}>{part.slice(2, -2)}</strong>;
+    }
+    return part;
+  });
+};
+
 function ProjectCards(props) {
   const navigate = useNavigate();
 
@@ -39,7 +50,7 @@ function ProjectCards(props) {
                   marginBottom: "15px",
                   lineHeight: "1.5"
                 }}>
-                  {intro}
+                  {renderFormattedText(intro)}
                 </div>
                 {details && (
                   <div style={{ 
@@ -51,7 +62,7 @@ function ProjectCards(props) {
                     paddingTop: "12px",
                     marginTop: "12px"
                   }}>
-                    {details}
+                    {renderFormattedText(details)}
                   </div>
                 )}
               </>

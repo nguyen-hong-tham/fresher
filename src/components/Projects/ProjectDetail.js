@@ -5,6 +5,17 @@ import Particle from "../Particle";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { BsGithub } from "react-icons/bs";
 
+const renderFormattedText = (text) => {
+  if (!text) return "";
+  const parts = text.split(/(\*\*.*?\*\*)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return <strong key={i} style={{ fontWeight: "700" }}>{part.slice(2, -2)}</strong>;
+    }
+    return part;
+  });
+};
+
 // Scale-ready Project database with detailed engineering insights
 const projectsData = [
   {
@@ -23,7 +34,7 @@ const projectsData = [
       "Oracle Cloud VPS"
     ],
     ghLink: "https://github.com/nguyen-hong-tham",
-    overview: "A scalable, production-grade School Management System engineered using a decentralized Microservices and Event-Driven architecture. It splits school operations into four independent services (User, Class, Subject, and Score) to maximize fault tolerance, autonomy, and load capacity. Optimized for cost-efficiency, the entire ecosystem runs on a 1GB RAM virtual server ($0 VPS hosting) by utilizing PostgreSQL multi-schema partition on Supabase Cloud, Dockerization, and virtual swap memory scaling.",
+    overview: "Built a **school management system** using **ASP.NET Core 9** and **Microservices Architecture**, implementing authentication, role-based authorization, class, subject, schedule, and score management with automatic GPA calculation. Designed asynchronous communication between services using **RabbitMQ (MassTransit)** to improve scalability and fault tolerance. Utilized **Entity Framework Core**, **PostgreSQL (Supabase)**, and **Docker** for development and deployment, with **Nginx** as a reverse proxy on **Oracle Cloud**.",
     roleResponsibilities: "Sole System Architect & Backend Developer. Designed the microservices splitting boundaries, set up the Docker network and Nginx reverse proxy routing, integrated Supabase PostgreSQL with logical schemas, implemented asynchronous event pub/sub using MassTransit and CloudAMQP (RabbitMQ), designed composite unique indices for strict business constraints, and deployed the entire architecture to an Oracle Cloud VPS using Docker Compose.",
     challenges: "Deploying 5 separate Docker containers (4 services + 1 Frontend MVC) on a budget VPS with only 1GB of physical RAM. At start, .NET host processes would trigger Out Of Memory (OOM) exceptions and crash. Another challenge was preventing concurrent data corruption, such as students being assigned to multiple classes in the same school year, or invalid grades being inputted into the system.",
     lessons: "Mastered microservices partition patterns, logical database schema isolation in PostgreSQL, and real-time asynchronous communication via RabbitMQ. Acquired deep DevOps experience including containerization using lightweight Alpine Linux images, configuring Nginx API gateway, and VPS server optimization using Swap files to handle heavy memory workloads on constrained hardware.",
@@ -437,7 +448,7 @@ function ProjectDetail() {
                 Project Overview
               </h3>
               <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "1.05rem", lineHeight: "1.8", color: "var(--text-secondary)", marginBottom: 0 }}>
-                {project.overview}
+                {renderFormattedText(project.overview)}
               </p>
             </div>
           </Col>

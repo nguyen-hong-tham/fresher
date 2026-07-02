@@ -29,6 +29,7 @@ const CodeWorkspaceMockup = () => {
             <li className="folder-item">src</li>
             <li className="file-item active">currently-building.ts</li>
             <li className="folder-item">projects</li>
+            <li className="file-item indent">SchoolManagement.ts</li>
             <li className="file-item indent">MAYCoffee.ts</li>
             <li className="file-item indent">FoodFast.ts</li>
             <li className="file-item indent">Vinabook.ts</li>
@@ -39,6 +40,8 @@ const CodeWorkspaceMockup = () => {
             <code>
               <span className="comment">{"// currently-building.ts"}</span><br /><br />
               <span className="keyword">export const</span> <span className="variable">projects</span> = {"{"}<br />
+              {"  "}SchoolManagement:<br />
+              {"    "}<span className="string">"Microservices school platform"</span>,<br /><br />
               {"  "}MAYCoffee:<br />
               {"    "}<span className="string">"Milk tea commerce platform"</span>,<br /><br />
               {"  "}FoodFast:<br />
@@ -149,6 +152,14 @@ function Home() {
           <h2 style={{ fontSize: "2.2rem", marginBottom: "40px", fontWeight: "600" }}>Currently Building</h2>
           
           <div className="mini-projects-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "20px", marginBottom: "40px" }}>
+            <div className="mini-project-item" style={{ padding: "20px", backgroundColor: "rgba(0,0,0,0.02)", borderRadius: "8px", border: "1px solid rgba(0,0,0,0.1)" }}>
+              <h3 style={{ fontSize: "1.3rem", fontWeight: "600", marginBottom: "8px" }}>School Management</h3>
+              <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)", marginBottom: "12px" }}>Microservices school platform</p>
+              <a href="/projects/school-management" onClick={(e) => { e.preventDefault(); navigate("/projects/school-management"); }} style={{ fontSize: "0.9rem", textDecoration: "none", color: "var(--accent)" }}>
+                View Details →
+              </a>
+            </div>
+
             <div className="mini-project-item" style={{ padding: "20px", backgroundColor: "rgba(0,0,0,0.02)", borderRadius: "8px", border: "1px solid rgba(0,0,0,0.1)" }}>
               <h3 style={{ fontSize: "1.3rem", fontWeight: "600", marginBottom: "8px" }}>MAY Coffee</h3>
               <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)", marginBottom: "12px" }}>Milk tea commerce platform</p>

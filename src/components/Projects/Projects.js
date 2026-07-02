@@ -31,7 +31,7 @@ function Projects() {
               imgPath={schoolmanagement}
               isBlog={false}
               title="School Management"
-              description={"A school management platform built with ASP.NET Core 9, Docker, RabbitMQ, and Supabase PostgreSQL.\n\n• Microservices Architecture: Split into 4 independent services (UserService, ClassService, SubjectService, ScoreService) communicating asynchronously via MassTransit & CloudAMQP.\n• DevOps Deployment: Dockerized and deployed on Oracle Cloud VPS using Nginx Reverse Proxy and optimized Swap RAM to run stably on a 1GB host at $0 cost."}
+              description={"A school management system built with **ASP.NET Core 9** and **Microservices Architecture**.\n\n• Core Features: authentication, role-based authorization (RBAC), class organization, subjects, teaching schedules, and score management with automatic GPA calculation.\n• Architecture & DevOps: **RabbitMQ (MassTransit)** asynchronous communication, **PostgreSQL (Supabase)**, **Docker** containerization, and **Nginx** reverse proxy on **Oracle Cloud**."}
               ghLink="https://github.com/nguyen-hong-tham"
               slug="school-management"
             />
