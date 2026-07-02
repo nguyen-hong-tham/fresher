@@ -7,6 +7,7 @@ import vina_users from "../../Assets/Projects/vina_users.png";
 import fast_food_restaurant from "../../Assets/Projects/fast_food_restaurant .png";
 import MAY_client from "../../Assets/Projects/MAY-client.png";
 import bookept_users from "../../Assets/Projects/bookept_users.png";
+import schoolmanagement from "../../Assets/Projects/schoolmanagement.png";
 
 function Projects() {
   return (
@@ -25,6 +26,17 @@ function Projects() {
           Featured <strong className="highlight-primary">Projects</strong>
         </h2>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={schoolmanagement}
+              isBlog={false}
+              title="School Management"
+              description={"A school management platform built with ASP.NET Core 9, Docker, RabbitMQ, and Supabase PostgreSQL.\n\n• Microservices Architecture: Split into 4 independent services (UserService, ClassService, SubjectService, ScoreService) communicating asynchronously via MassTransit & CloudAMQP.\n• DevOps Deployment: Dockerized and deployed on Oracle Cloud VPS using Nginx Reverse Proxy and optimized Swap RAM to run stably on a 1GB host at $0 cost."}
+              ghLink="https://github.com/nguyen-hong-tham"
+              slug="school-management"
+            />
+          </Col>
+
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={MAY_client}

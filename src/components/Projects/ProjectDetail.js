@@ -8,6 +8,74 @@ import { BsGithub } from "react-icons/bs";
 // Scale-ready Project database with detailed engineering insights
 const projectsData = [
   {
+    slug: "school-management",
+    title: "School Management — Microservices & Event-Driven System",
+    techStack: [
+      "ASP.NET Core 9",
+      "Entity Framework Core",
+      "Npgsql (PostgreSQL)",
+      "ASP.NET Core MVC (Razor)",
+      "Supabase Cloud",
+      "MassTransit",
+      "RabbitMQ (CloudAMQP)",
+      "Docker & Compose",
+      "Nginx Reverse Proxy",
+      "Oracle Cloud VPS"
+    ],
+    ghLink: "https://github.com/nguyen-hong-tham",
+    overview: "A scalable, production-grade School Management System engineered using a decentralized Microservices and Event-Driven architecture. It splits school operations into four independent services (User, Class, Subject, and Score) to maximize fault tolerance, autonomy, and load capacity. Optimized for cost-efficiency, the entire ecosystem runs on a 1GB RAM virtual server ($0 VPS hosting) by utilizing PostgreSQL multi-schema partition on Supabase Cloud, Dockerization, and virtual swap memory scaling.",
+    roleResponsibilities: "Sole System Architect & Backend Developer. Designed the microservices splitting boundaries, set up the Docker network and Nginx reverse proxy routing, integrated Supabase PostgreSQL with logical schemas, implemented asynchronous event pub/sub using MassTransit and CloudAMQP (RabbitMQ), designed composite unique indices for strict business constraints, and deployed the entire architecture to an Oracle Cloud VPS using Docker Compose.",
+    challenges: "Deploying 5 separate Docker containers (4 services + 1 Frontend MVC) on a budget VPS with only 1GB of physical RAM. At start, .NET host processes would trigger Out Of Memory (OOM) exceptions and crash. Another challenge was preventing concurrent data corruption, such as students being assigned to multiple classes in the same school year, or invalid grades being inputted into the system.",
+    lessons: "Mastered microservices partition patterns, logical database schema isolation in PostgreSQL, and real-time asynchronous communication via RabbitMQ. Acquired deep DevOps experience including containerization using lightweight Alpine Linux images, configuring Nginx API gateway, and VPS server optimization using Swap files to handle heavy memory workloads on constrained hardware.",
+    roles: [
+      {
+        name: "Administrative Portal",
+        status: "LIVE",
+        imgPath: require("../../Assets/Projects/schoolmanagement.png"),
+        summary: [
+          "Manage full user lifecycles and role-based access controls (RBAC) for Admins, Teachers, and Students",
+          "Configure school structures including classes, grades, academic semesters, and subject catalogs",
+          "Coordinate homeroom assignments, teacher schedules, and student classroom placements"
+        ],
+        demoLink: "https://schoolmanagement-tham.duckdns.org/",
+        credentials: [
+          { label: "Username", value: "admin" },
+          { label: "Password", value: "Admin@123" }
+        ]
+      },
+      {
+        name: "Teacher Portal",
+        status: "LIVE",
+        imgPath: require("../../Assets/Projects/schoolmanagement.png"),
+        summary: [
+          "Manage course content, view designated teaching schedules, and track class rosters",
+          "Grade component manager: input, update, and edit component scores (15m, mid-term, final exam)",
+          "View and monitor automated grade averages and final GPA evaluations for students"
+        ],
+        demoLink: "https://schoolmanagement-tham.duckdns.org/",
+        credentials: [
+          { label: "Username", value: "teacher.an" },
+          { label: "Password", value: "Teacher@123" }
+        ]
+      },
+      {
+        name: "Student Portal",
+        status: "LIVE",
+        imgPath: require("../../Assets/Projects/schoolmanagement.png"),
+        summary: [
+          "Access personalized profiles, academic transcripts, and historical class enrollments",
+          "View daily class schedules, classroom locations, and teaching teacher contact details",
+          "Track progress metrics with automated GPA calculator and final academic classifications"
+        ],
+        demoLink: "https://schoolmanagement-tham.duckdns.org/",
+        credentials: [
+          { label: "Username", value: "student.cuong" },
+          { label: "Password", value: "Student@123" }
+        ]
+      }
+    ]
+  },
+  {
     slug: "may-coffee",
     title: "MAY Coffee — Milk Tea E-Commerce Platform",
     techStack: [
