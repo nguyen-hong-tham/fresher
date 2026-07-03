@@ -34,7 +34,11 @@ const projectsData = [
       "Oracle Cloud VPS"
     ],
     ghLink: "https://github.com/nguyen-hong-tham",
-    overview: "Built a **school management system** using **ASP.NET Core 9** and **Microservices Architecture**, implementing authentication, role-based authorization, class, subject, schedule, and score management with automatic GPA calculation. Designed asynchronous communication between services using **RabbitMQ (MassTransit)** to improve scalability and fault tolerance. Utilized **Entity Framework Core**, **PostgreSQL (Supabase)**, and **Docker** for development and deployment, with **Nginx** as a reverse proxy on **Oracle Cloud**.",
+    overview: `Developed an **enterprise-grade School Management System** using **ASP.NET Core 9** and a **Microservices Architecture** to digitalize school operations, including user management, class organization, subject management, teaching schedules, and academic score management with automatic GPA calculation.
+
+The system is built with **four independent microservices** that communicate asynchronously through **MassTransit and RabbitMQ**, reducing service coupling while improving scalability and fault tolerance. To optimize security and maintainability, the frontend adopts the **Backend-for-Frontend (BFF)** pattern with **ASP.NET Core MVC**, while the backend follows a **Layered Architecture** and **Repository Pattern**.
+
+Data is managed using **Supabase PostgreSQL** with **schema isolation** for each service. The project also applies **efficient data loading strategies** (Eager Loading, Explicit Loading, and local cache synchronization through events) to improve query performance and avoid unnecessary cross-service communication. The entire system is containerized with **Docker** and deployed on **Oracle Cloud** behind **Nginx Reverse Proxy**.`,
     roleResponsibilities: "Sole System Architect & Backend Developer. Designed the microservices splitting boundaries, set up the Docker network and Nginx reverse proxy routing, integrated Supabase PostgreSQL with logical schemas, implemented asynchronous event pub/sub using MassTransit and CloudAMQP (RabbitMQ), designed composite unique indices for strict business constraints, and deployed the entire architecture to an Oracle Cloud VPS using Docker Compose.",
     challenges: "Deploying 5 separate Docker containers (4 services + 1 Frontend MVC) on a budget VPS with only 1GB of physical RAM. At start, .NET host processes would trigger Out Of Memory (OOM) exceptions and crash. Another challenge was preventing concurrent data corruption, such as students being assigned to multiple classes in the same school year, or invalid grades being inputted into the system.",
     lessons: "Mastered microservices partition patterns, logical database schema isolation in PostgreSQL, and real-time asynchronous communication via RabbitMQ. Acquired deep DevOps experience including containerization using lightweight Alpine Linux images, configuring Nginx API gateway, and VPS server optimization using Swap files to handle heavy memory workloads on constrained hardware.",
@@ -44,9 +48,9 @@ const projectsData = [
         status: "LIVE",
         imgPath: require("../../Assets/Projects/schoolmanagement.png"),
         summary: [
-          "Manage full user lifecycles and role-based access controls (RBAC) for Admins, Teachers, and Students",
-          "Configure school structures including classes, grades, academic semesters, and subject catalogs",
-          "Coordinate homeroom assignments, teacher schedules, and student classroom placements"
+          "Manage users, roles, and permissions (RBAC)",
+          "Configure classes, grades, semesters, and subjects",
+          "Assign homeroom teachers and teaching schedules"
         ],
         demoLink: "https://schoolmanagement-tham.duckdns.org/",
         credentials: [
@@ -59,9 +63,9 @@ const projectsData = [
         status: "LIVE",
         imgPath: require("../../Assets/Projects/schoolmanagement.png"),
         summary: [
-          "Manage course content, view designated teaching schedules, and track class rosters",
-          "Grade component manager: input, update, and edit component scores (15m, mid-term, final exam)",
-          "View and monitor automated grade averages and final GPA evaluations for students"
+          "Manage student scores (15-minute, midterm, and final exams)",
+          "View assigned classes and teaching schedules",
+          "Monitor GPA calculations and academic performance"
         ],
         demoLink: "https://schoolmanagement-tham.duckdns.org/",
         credentials: [
@@ -76,7 +80,7 @@ const projectsData = [
         summary: [
           "Access personalized profiles, academic transcripts, and historical class enrollments",
           "View daily class schedules, classroom locations, and teaching teacher contact details",
-          "Track progress metrics with automated GPA calculator and final academic classifications"
+          "View GPA, academic results, and learning progress"
         ],
         demoLink: "https://schoolmanagement-tham.duckdns.org/",
         credentials: [
@@ -447,7 +451,7 @@ function ProjectDetail() {
               <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: "700", marginBottom: "15px", color: "var(--text-primary)" }}>
                 Project Overview
               </h3>
-              <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "1.05rem", lineHeight: "1.8", color: "var(--text-secondary)", marginBottom: 0 }}>
+              <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "1.05rem", lineHeight: "1.8", color: "var(--text-secondary)", marginBottom: 0, whiteSpace: "pre-line" }}>
                 {renderFormattedText(project.overview)}
               </p>
             </div>
