@@ -93,7 +93,7 @@ function Projects() {
               isBlog={false}
               title="BOOKEPT"
               description={"An online bookstore application built with HTML, CSS, PHP, and MySQL.\n\n• Features: product search, cart workflows, checkout, billing, and profile management.\n• Dashboard: inventory management (CRUD), catalog updates, and order processing workflows."}
-              ghLink="https://github.com/nguyen-hong-tham"
+              ghLink="https://github.com/nguyen-hong-tham/nguyen-hong-tham-Bookstore-Website_2"
               slug="bookept"
             />
           </Col>

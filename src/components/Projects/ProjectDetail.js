@@ -328,7 +328,7 @@ Data is managed using **Supabase PostgreSQL** with **schema isolation** for each
       "PHP",
       "MySQL"
     ],
-    ghLink: "https://github.com/nguyen-hong-tham",
+    ghLink: "https://github.com/nguyen-hong-tham/nguyen-hong-tham-Bookstore-Website_2",
     overview: "BOOKEPT is a classic e-commerce bookstore utilizing a traditional Client-Server architecture with PHP and MySQL, supporting book search, shopping carts, Cash-on-Delivery (COD) checkout pipelines, and a full catalog manager for administrators.",
     roleResponsibilities: "Full-stack Developer. Designed and normalized the MySQL database schema, wrote optimized SQL query statements, developed server-side request routing and page generation using raw PHP, and created interactive client interfaces with JavaScript.",
     challenges: "Hardening the raw PHP codebase against common vulnerabilities like SQL Injection using Prepared Statements, and XSS through thorough input validation and output escaping.",
