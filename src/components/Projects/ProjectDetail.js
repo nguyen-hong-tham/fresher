@@ -325,7 +325,7 @@ The system comprises three coordinated sub-systems communicating via **REST API 
         ],
         demoLink: "https://bookstore-website-gamma.vercel.app/",
         credentials: null,
-        note: "Nhớ đăng xuất tài khoản hiện tại trước khi thực hiện đăng nhập"
+        note: "Please log out of the current account before logging in"
       },
       {
         name: "Admin Dashboard",
@@ -341,7 +341,7 @@ The system comprises three coordinated sub-systems communicating via **REST API 
           { label: "Phone", value: "1234567890" },
           { label: "Password", value: "123456" }
         ],
-        note: "Nhớ đăng xuất tài khoản hiện tại trước khi thực hiện đăng nhập"
+        note: "Please log out of the current account before logging in"
       }
     ]
   },
@@ -574,7 +574,7 @@ function ProjectDetail() {
 
                     {role.note && (
                       <div className="project-card-red-note">
-                        * Lưu ý: {role.note}
+                        * Note: {role.note}
                       </div>
                     )}
                   </div>
