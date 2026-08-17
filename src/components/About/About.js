@@ -3,15 +3,20 @@ import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import Github from "./Github";
 import Techstack from "./Techstack";
-import profileImage from "../../Assets/about_me.jpg";
+import { FaLaptopCode } from "react-icons/fa";
 
 const DeveloperProfileCard = () => {
   return (
     <div className="developer-profile-card">
       <div className="profile-card-header">
-        <img src={profileImage} alt="Profile" className="profile-avatar-image" style={{ width: "80px", height: "80px", borderRadius: "50%", objectFit: "cover" }} />
+        <div className="profile-avatar-placeholder">
+          <FaLaptopCode />
+        </div>
         <h3 className="profile-card-name">Nguyễn Hồng Thắm</h3>
         <p className="profile-card-title">Backend-Focused Full-stack Developer</p>
+        <div className="profile-availability-badge">
+          <span className="availability-dot"></span> Open to Work
+        </div>
       </div>
       <div className="profile-info-list">
         <div className="profile-info-item">
