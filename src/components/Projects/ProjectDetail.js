@@ -324,7 +324,8 @@ The system comprises three coordinated sub-systems communicating via **REST API 
           "Track purchase history through a responsive e-commerce interface"
         ],
         demoLink: "https://bookstore-website-gamma.vercel.app/",
-        credentials: null
+        credentials: null,
+        note: "Nhớ đăng xuất tài khoản hiện tại trước khi thực hiện đăng nhập"
       },
       {
         name: "Admin Dashboard",
@@ -545,12 +546,6 @@ function ProjectDetail() {
                             <span className="cred-value">{cred.value}</span>
                           </div>
                         ))}
-                        {role.note && (
-                          <div className="cred-note">
-                            <span className="cred-note-highlight">⚠️ Lưu ý: </span>
-                            <span>{role.note}</span>
-                          </div>
-                        )}
                       </div>
                     ) : role.isScan ? (
                       <div className="project-credentials-box public-demo scan-instruction" style={{ textAlign: "center" }}>
@@ -560,12 +555,6 @@ function ProjectDetail() {
                     ) : (
                       <div className="project-credentials-box public-demo">
                         Public Demo Available
-                        {role.note && (
-                          <div className="cred-note" style={{ marginTop: "6px" }}>
-                            <span className="cred-note-highlight">⚠️ Lưu ý: </span>
-                            <span>{role.note}</span>
-                          </div>
-                        )}
                       </div>
                     )}
 
@@ -580,6 +569,12 @@ function ProjectDetail() {
                             <span className="cred-value">{item.value}</span>
                           </div>
                         ))}
+                      </div>
+                    )}
+
+                    {role.note && (
+                      <div className="project-card-red-note">
+                        * Lưu ý: {role.note}
                       </div>
                     )}
                   </div>
