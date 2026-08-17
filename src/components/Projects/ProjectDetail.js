@@ -97,43 +97,66 @@ Data is managed using **Supabase PostgreSQL** with **schema isolation** for each
       "React 19",
       "TypeScript",
       "TailwindCSS",
+      "Shadcn/ui",
+      "Zustand",
       "NestJS 11",
-      "PostgreSQL",
-      "Prisma",
+      "PostgreSQL (Supabase)",
+      "Prisma ORM",
       "Socket.io",
       "Firebase OTP",
-      "VNPay"
+      "VNPay SDK",
+      "OpenAI GPT-3.5"
     ],
     ghLink: "https://github.com/nguyen-hong-tham/MAY",
-    overview: "MAY Coffee is a comprehensive milk tea e-commerce platform featuring an interactive web app for customers to browse, customize drinks (sizes, toppings), earn loyalty rewards, and pay securely via VNPay; a Staff Portal for real-time order tracking and queue management; and a centralized Admin Dashboard for managing catalogs, viewing business analytics, and exporting reports (Excel/PDF).",
-    roleResponsibilities: "Served as the primary Backend Developer. Designed the modular NestJS architecture, set up the PostgreSQL relational schema using Prisma ORM, integrated VNPay checkout and IPN callbacks, built real-time order synchronization with Socket.io, and implemented Firebase OTP authentication alongside Role-Based Access Control (RBAC).",
-    challenges: "Synchronizing live order statuses across three interfaces (Customer, Staff, Admin) without connections dropping. Managing asynchronous payment callbacks reliably to prevent inconsistent order states if users closed their browser before redirection.",
-    lessons: "Gained deep experience in NestJS modular architecture, query optimization in Prisma, secure API design with JWT guards, and implementing robust webhook handling for third-party integrations.",
+    overview: `**MAY Coffee** is a comprehensive monorepo E-commerce & Smart F&B Chain Management platform built with **React 19, TypeScript, NestJS 11, and PostgreSQL (Supabase)** with **Prisma ORM**.
+
+The system comprises three coordinated sub-systems communicating via **REST API and WebSockets**:
+1. **Customer App (React 19 + TailwindCSS v4):** Passwordless Firebase OTP login, deep drink customization (size, sugar/ice level, toppings), dual payment options (COD & VNPay Sandbox), real-time order tracking, loyalty point rewards, and an **OpenAI GPT-3.5 powered AI Assistant** for intelligent menu consultations.
+2. **Staff Dashboard (React 19 + Shadcn/ui + Zustand):** Real-time order queue with instant WebSocket notifications, swift order state transitions, and store-level ingredient management.
+3. **Admin Dashboard (React 19 + Shadcn/ui):** Centralized RBAC management, product & category CRUD, visual 30-day analytics charts, automated loyalty tier discounts, and one-click financial exports to **Excel (XLSX)** and **PDF invoices (html2pdf)**.`,
+    roleResponsibilities: "Lead Full-Stack Developer. Architected the monorepo structure, designed the PostgreSQL schema and ACID transactions with Prisma, implemented JWT dual-token authentication & Firebase OTP verification, integrated VNPay checkout with IPN webhooks, created real-time Socket.io gateways, and embedded OpenAI GPT-3.5 with custom context filtering.",
+    challenges: "Synchronizing real-time order statuses across Customer, Staff, and Admin interfaces without dropped connections. Ensuring zero payment data discrepancy by implementing secure SHA512 checksum validation and idempotent IPN webhooks with Prisma database transactions for rollback safety.",
+    lessons: "Mastered NestJS modular architecture, Prisma transaction isolation, WebSocket lifecycle management, AI prompt contextual filtering for menu constraints, and building highly responsive dashboards with Zustand and Shadcn/ui.",
     roles: [
       {
         name: "Customer Experience",
         status: "LIVE",
         imgPath: require("../../Assets/Projects/MAY-client.png"),
         summary: [
-          "Users can browse products and customize drink sizes & toppings",
-          "Manage shopping carts and complete checkout via VNPay/COD",
-          "Track orders in real time using Socket.io integration",
-          "Firebase OTP authentication and loyalty rewards program",
-          "Personalized recommendations and integrated AI chatbox for support"
+          "Browse menu & customize drinks (Size S/M/L, Sugar/Ice ratio, Custom Toppings)",
+          "Dual flexible checkout: Cash on Delivery (COD) & Online Banking (VNPay Sandbox)",
+          "Real-time order state tracking via Socket.io from preparation to delivery",
+          "Passwordless phone authentication via Firebase OTP & Auto Account Provisioning",
+          "Smart AI Assistant (OpenAI GPT-3.5) with calorie and caffeine filtering",
+          "Loyalty rewards system: 10% cashback points & tier discounts (Silver, Gold, Platinum)"
         ],
         demoLink: "https://may-client-snowy.vercel.app/",
         credentials: [
           { label: "Phone", value: "0900000003" },
           { label: "OTP", value: "123456" }
-        ]
+        ],
+        testPayment: {
+          title: "Test VNPay Sandbox Account",
+          details: [
+            { label: "Ngân hàng", value: "NCB" },
+            { label: "Số thẻ", value: "9704198526191432198" },
+            { label: "Tên chủ thẻ", value: "NGUYEN VAN A" },
+            { label: "Ngày phát hành", value: "07/15" },
+            { label: "OTP", value: "123456" }
+          ]
+        }
       },
       {
         name: "Staff Dashboard",
         status: "LIVE",
         imgPath: require("../../Assets/Projects/MAY-staff.png"),
         summary: [
-          "Shop-level order monitoring with quick order status updates",
-          "Real-time notifications for incoming customer orders"
+          "Shop-level live order queue with instant push notifications via WebSockets",
+          "Quick order workflow processing (Pending → In Progress → Completed → Delivery)",
+          "Manage drink toppings, ingredients, and in-store product availability status",
+          "Real-time customer status synchronization to prevent order duplication",
+          "Responsive interface built with React 19, TypeScript, Shadcn/ui & Lucide Icons",
+          "Secure role-based login with dual token mechanism (Access Token & Refresh Token)"
         ],
         demoLink: "https://may-admin-seven.vercel.app/",
         credentials: [
@@ -146,10 +169,12 @@ Data is managed using **Supabase PostgreSQL** with **schema isolation** for each
         status: "LIVE",
         imgPath: require("../../Assets/Projects/MAY-admin.png"),
         summary: [
-          "Centralized dashboard with RBAC permissions and real-time sync",
-          "Manage products, categories, customers, and operational workflows",
-          "Business analytics dashboards and visual revenue monitoring",
-          "Excel/PDF report exports by day, month, quarter, and year"
+          "Centralized management: full CRUD for products, multi-level categories & toppings",
+          "Staff & customer account management with strict Role-Based Access Control (RBAC)",
+          "Real-time visual analytics: 30-day revenue charts, order volume & VIP customer insights",
+          "One-click financial export: Excel (XLSX) revenue spreadsheets & PDF customer invoices",
+          "State architecture powered by Zustand, React Hook Form, and Zod validation",
+          "Automated Loyalty membership tier management (Normal, Silver, Gold, Platinum)"
         ],
         demoLink: "https://may-admin-seven.vercel.app/",
         credentials: [
@@ -528,6 +553,20 @@ function ProjectDetail() {
                     ) : (
                       <div className="project-credentials-box public-demo">
                         Public Demo Available
+                      </div>
+                    )}
+
+                    {role.testPayment && (
+                      <div className="project-credentials-box" style={{ marginTop: "10px", borderColor: "rgba(95, 125, 102, 0.4)" }}>
+                        <div style={{ fontSize: "0.8rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.5px", color: "var(--accent)", marginBottom: "8px", borderBottom: "1px dashed var(--border)", paddingBottom: "4px", textAlign: "left" }}>
+                          💳 {role.testPayment.title || "VNPay Test Sandbox"}
+                        </div>
+                        {role.testPayment.details.map((item, idx) => (
+                          <div key={idx} className="cred-row">
+                            <span className="cred-label">{item.label}:</span>
+                            <span className="cred-value">{item.value}</span>
+                          </div>
+                        ))}
                       </div>
                     )}
                   </div>

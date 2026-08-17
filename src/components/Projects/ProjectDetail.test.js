@@ -87,8 +87,8 @@ describe('ProjectDetail Component - Back Button Test', () => {
       </BrowserRouter>
     );
 
-    // Kiểm tra project title (bằng regex để khớp tự do hơn)
-    const projectTitle = screen.getByText(/MAY Coffee/i);
+    // Kiểm tra project title
+    const projectTitle = screen.getByRole('heading', { name: /MAY Coffee/i });
     expect(projectTitle).toBeInTheDocument();
     console.log('✅ Project MAY Coffee hiển thị OK');
   });

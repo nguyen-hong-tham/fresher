@@ -42,7 +42,7 @@ function Projects() {
               imgPath={MAY_client}
               isBlog={false}
               title="MAY Coffee"
-              description={"A full-stack milk tea e-commerce platform built with React, NestJS, and PostgreSQL.\n\n• Customer Experience: browse products, customize drink sizes/toppings, loyalty rewards, VNPay payment, real-time order tracking (Socket.io), and AI chatbot support.\n• Admin & Staff Dashboard: manage products, operational workflows, and export daily/monthly business reports (Excel/PDF)."}
+              description={"A full-stack milk tea e-commerce platform built with React, NestJS, and PostgreSQL.\n\n• Customer Experience: browse products, customize drink sizes/toppings, loyalty rewards, flexible checkout (Cash / VNPay Banking Sandbox), real-time order tracking (Socket.io), and AI chatbot support.\n• Admin & Staff Dashboard: manage products, operational workflows, and export daily/monthly business reports (Excel/PDF)."}
               ghLink="https://github.com/nguyen-hong-tham/MAY"
               slug="may-coffee"
             />
