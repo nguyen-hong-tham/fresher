@@ -33,7 +33,7 @@ const projectsData = [
       "Nginx Reverse Proxy",
       "Oracle Cloud VPS"
     ],
-    ghLink: "https://github.com/nguyen-hong-tham",
+    ghLink: "https://github.com/nguyen-hong-tham/SchoolManagementSystem",
     overview: `Developed an **enterprise-grade School Management System** using **ASP.NET Core 9** and a **Microservices Architecture** to digitalize school operations, including user management, class organization, subject management, teaching schedules, and academic score management with automatic GPA calculation.
 
 The system is built with **four independent microservices** that communicate asynchronously through **MassTransit and RabbitMQ**, reducing service coupling while improving scalability and fault tolerance. To optimize security and maintainability, the frontend adopts the **Backend-for-Frontend (BFF)** pattern with **ASP.NET Core MVC**, while the backend follows a **Layered Architecture** and **Repository Pattern**.
@@ -559,7 +559,7 @@ function ProjectDetail() {
               <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: "700", marginBottom: "25px", color: "var(--text-primary)", borderBottom: "1px solid var(--border)", paddingBottom: "15px" }}>
                 Engineering Depth & Insights
               </h3>
-              
+
               <Row>
                 <Col md={4} style={{ marginBottom: "20px" }}>
                   <h4 style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: "600", color: "var(--accent)", marginBottom: "12px" }}>

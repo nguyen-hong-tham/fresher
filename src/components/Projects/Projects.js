@@ -32,7 +32,7 @@ function Projects() {
               isBlog={false}
               title="School Management"
               description={"A school management system built with **ASP.NET Core 9** and **Microservices Architecture**.\n\n• Core Features: authentication, role-based authorization (RBAC), class organization, subjects, teaching schedules, and score management with automatic GPA calculation.\n• Architecture & DevOps: **RabbitMQ (MassTransit)** asynchronous communication, **PostgreSQL (Supabase)**, **Docker** containerization, and **Nginx** reverse proxy on **Oracle Cloud**."}
-              ghLink="https://github.com/nguyen-hong-tham"
+              ghLink="https://github.com/nguyen-hong-tham/SchoolManagementSystem"
               slug="school-management"
             />
           </Col>
