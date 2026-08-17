@@ -259,8 +259,11 @@ function Home() {
 
               <li className="social-icons">
                 <a
-                  href="mailto:nguyenhongtham27.09.2004@gmail.com"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=nguyenhongtham27.09.2004@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
                   className="icon-colour home-social-icons"
+                  title="Send Email via Gmail"
                 >
                   <AiOutlineMail />
                 </a>
