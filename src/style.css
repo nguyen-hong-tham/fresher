@@ -1075,6 +1075,21 @@ button:focus {
   font-weight: 500;
 }
 
+.cred-note {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  text-align: left;
+  line-height: 1.4;
+}
+
+.cred-note-highlight {
+  color: #e5a93c !important;
+  font-weight: 600;
+}
+
 /* Premium Glowing Deploy CTA Button */
 .project-action-container {
   margin-top: auto;
