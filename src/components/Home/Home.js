@@ -78,11 +78,11 @@ function Home() {
               <h2 className="heading-sub" style={{ paddingLeft: 50, textAlign: "left", fontSize: "1.25rem", color: "var(--text-secondary)", fontWeight: "500", lineHeight: "1.6", maxWidth: "650px", marginBottom: "15px" }}>
                 Final-year Information Technology student with hands-on experience building Full-stack applications and Backend systems through production-grade projects and a 3-month corporate internship.
               </h2>
-              
+
               <p style={{ paddingLeft: 50, textAlign: "left", fontSize: "1.05rem", color: "var(--text-primary)", marginTop: "5px", marginBottom: "20px", lineHeight: "1.6", maxWidth: "650px" }}>
                 Backend-focused developer experienced in building web applications with React, Next.js, NestJS, and PostgreSQL. Passionate about building scalable architectures, robust RESTful APIs, secure authentication flows, and database-driven systems.
               </p>
-              
+
               <div style={{ paddingLeft: 50, textAlign: "left", marginBottom: "25px" }}>
                 <span className="status-badge live" style={{ display: "inline-block", padding: "6px 12px", fontSize: "0.85rem" }}>
                   Ready for Fresher Backend / Full-stack Developer roles.
@@ -98,20 +98,20 @@ function Home() {
               </div>
 
               <div style={{ paddingLeft: 50, display: "flex", gap: "15px", flexWrap: "wrap" }}>
-                <Link 
-                  to="/resume" 
+                <Link
+                  to="/resume"
                   className="cta-button-primary"
                 >
                   Download CV
                 </Link>
-                <Link 
-                  to="/projects" 
+                <Link
+                  to="/projects"
                   className="cta-button-secondary"
                 >
                   View Projects
                 </Link>
-                <Link 
-                  to="/about" 
+                <Link
+                  to="/about"
                   className="cta-button-secondary"
                 >
                   About Me
@@ -150,7 +150,7 @@ function Home() {
       <Container>
         <div className="mini-projects-section" style={{ paddingTop: "60px", paddingBottom: "60px", textAlign: "center" }}>
           <h2 style={{ fontSize: "2.2rem", marginBottom: "40px", fontWeight: "600" }}>Currently Building</h2>
-          
+
           <div className="mini-projects-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "20px", marginBottom: "40px" }}>
             <div className="mini-project-item" style={{ padding: "20px", backgroundColor: "rgba(0,0,0,0.02)", borderRadius: "8px", border: "1px solid rgba(0,0,0,0.1)" }}>
               <h3 style={{ fontSize: "1.3rem", fontWeight: "600", marginBottom: "8px" }}>School Management</h3>
@@ -185,8 +185,8 @@ function Home() {
             </div>
           </div>
 
-          <Link 
-            to="/projects" 
+          <Link
+            to="/projects"
             className="cta-button-primary"
             style={{ marginBottom: "60px" }}
           >
@@ -202,10 +202,10 @@ function Home() {
           <p style={{ fontSize: "1.1rem", color: "var(--text-secondary)", marginBottom: "35px", maxWidth: "650px", margin: "0 auto 35px", lineHeight: "1.6" }}>
             Ready to contribute and optimize systems from day one. I am seeking full-time opportunities in enterprise environments with a career path in Backend or Full-stack development.
           </p>
-          
+
           <div style={{ display: "flex", gap: "15px", justifyContent: "center", flexWrap: "wrap", flexDirection: "column", alignItems: "center" }}>
-            <Link 
-              to="/resume" 
+            <Link
+              to="/resume"
               className="cta-button-primary"
             >
               Download CV
@@ -259,7 +259,7 @@ function Home() {
 
               <li className="social-icons">
                 <a
-                  href="mailto:nguyenhongtham@gmail.com"
+                  href="mailto:nguyenhongtham27.09.2004@gmail.com"
                   className="icon-colour home-social-icons"
                 >
                   <AiOutlineMail />
