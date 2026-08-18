@@ -31,8 +31,8 @@ const CodeWorkspaceMockup = () => {
             <li className="folder-item">projects</li>
             <li className="file-item indent">SchoolManagement.ts</li>
             <li className="file-item indent">MAYCoffee.ts</li>
-            <li className="file-item indent">FoodFast.ts</li>
             <li className="file-item indent">Vinabook.ts</li>
+            <li className="file-item indent">FoodFast.ts</li>
           </ul>
         </div>
         <div className="code-editor">
@@ -44,10 +44,10 @@ const CodeWorkspaceMockup = () => {
               {"    "}<span className="string">"Microservices school platform"</span>,<br /><br />
               {"  "}MAYCoffee:<br />
               {"    "}<span className="string">"Milk tea commerce platform"</span>,<br /><br />
-              {"  "}FoodFast:<br />
-              {"    "}<span className="string">"Multi-role ordering system"</span>,<br /><br />
               {"  "}Vinabook:<br />
-              {"    "}<span className="string">"Fullstack bookstore platform"</span><br />
+              {"    "}<span className="string">"Fullstack bookstore platform"</span>,<br /><br />
+              {"  "}FoodFast:<br />
+              {"    "}<span className="string">"Multi-role ordering system"</span><br />
               {"}"};
             </code>
           </pre>
@@ -169,17 +169,17 @@ function Home() {
             </div>
 
             <div className="mini-project-item" style={{ padding: "20px", backgroundColor: "rgba(0,0,0,0.02)", borderRadius: "8px", border: "1px solid rgba(0,0,0,0.1)" }}>
-              <h3 style={{ fontSize: "1.3rem", fontWeight: "600", marginBottom: "8px" }}>FoodFast</h3>
-              <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)", marginBottom: "12px" }}>Multi-role ordering system</p>
-              <a href="/projects/foodfast" onClick={(e) => { e.preventDefault(); navigate("/projects/foodfast"); }} style={{ fontSize: "0.9rem", textDecoration: "none", color: "var(--accent)" }}>
+              <h3 style={{ fontSize: "1.3rem", fontWeight: "600", marginBottom: "8px" }}>Vinabook</h3>
+              <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)", marginBottom: "12px" }}>Fullstack bookstore application</p>
+              <a href="/projects/vinabook" onClick={(e) => { e.preventDefault(); navigate("/projects/vinabook"); }} style={{ fontSize: "0.9rem", textDecoration: "none", color: "var(--accent)" }}>
                 View Details →
               </a>
             </div>
 
             <div className="mini-project-item" style={{ padding: "20px", backgroundColor: "rgba(0,0,0,0.02)", borderRadius: "8px", border: "1px solid rgba(0,0,0,0.1)" }}>
-              <h3 style={{ fontSize: "1.3rem", fontWeight: "600", marginBottom: "8px" }}>Vinabook</h3>
-              <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)", marginBottom: "12px" }}>Fullstack bookstore application</p>
-              <a href="/projects/vinabook" onClick={(e) => { e.preventDefault(); navigate("/projects/vinabook"); }} style={{ fontSize: "0.9rem", textDecoration: "none", color: "var(--accent)" }}>
+              <h3 style={{ fontSize: "1.3rem", fontWeight: "600", marginBottom: "8px" }}>FoodFast</h3>
+              <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)", marginBottom: "12px" }}>Multi-role ordering system</p>
+              <a href="/projects/foodfast" onClick={(e) => { e.preventDefault(); navigate("/projects/foodfast"); }} style={{ fontSize: "0.9rem", textDecoration: "none", color: "var(--accent)" }}>
                 View Details →
               </a>
             </div>
