@@ -12,7 +12,6 @@ import {
   AiOutlineUser,
 } from "react-icons/ai";
 
-import { CgFileDocument } from "react-icons/cg";
 import { FaBriefcase } from "react-icons/fa";
 
 function NavBar() {
